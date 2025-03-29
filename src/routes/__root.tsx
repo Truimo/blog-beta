@@ -1,9 +1,9 @@
 import {createRootRoute, HeadContent, Link, Outlet, Scripts,} from '@tanstack/react-router'
 import {TanStackRouterDevtools} from '@tanstack/react-router-devtools'
 import React from 'react'
+import {seo} from '~/utils/seo'
 import {DefaultCatchBoundary} from '~/components/DefaultCatchBoundary'
 import {NotFound} from '~/components/NotFound'
-import {seo} from '~/utils/seo'
 import appCss from '~/styles/app.css?url'
 
 
@@ -120,7 +120,7 @@ function RootDocument({children}: { children: React.ReactNode }) {
         </div>
         <hr/>
         {children}
-        <TanStackRouterDevtools position="bottom-right"/>
+        <TanStackRouterDevtools position="bottom-left"/>
         <Scripts/>
         </body>
         </html>

@@ -1,14 +1,13 @@
-export const seo = ({
-                        title,
-                        description,
-                        keywords,
-                        image,
-                    }: {
+interface SeoConfig {
     title: string
     description?: string
     image?: string
     keywords?: string
-}) => {
+}
+
+export const seo = (seo: SeoConfig) => {
+    const { title, description, keywords, image } = seo
+
     const tags = [
         {title},
         {name: 'description', content: description},
@@ -20,14 +19,15 @@ export const seo = ({
         {name: 'og:type', content: 'website'},
         {name: 'og:title', content: title},
         {name: 'og:description', content: description},
-        ...(image
-            ? [
-                {name: 'twitter:image', content: image},
-                {name: 'twitter:card', content: 'summary_large_image'},
-                {name: 'og:image', content: image},
-            ]
-            : []),
     ]
+
+    if (image) {
+        tags.push(
+            {name: 'twitter:image', content: image},
+            {name: 'twitter:card', content: 'summary_large_image'},
+            {name: 'og:image', content: image}
+        )
+    }
 
     return tags
 }
