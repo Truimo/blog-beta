@@ -8,12 +8,13 @@ yarn.lock
 .vercel
 .output
 .vinxi
+.netlify
 
+/dist/
 /build/
 /api/
 /server/build
 /public/build
-.vinxi
 # Sentry Config File
 .env.sentry-build-plugin
 /test-results/
