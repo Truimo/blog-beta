@@ -14,11 +14,9 @@ function LayoutComponent() {
                     activeProps={{
                         className: 'font-bold',
                     }}
-                >
-                    Go to route A
+                >Go to route A
                 </Link>
-                <Link
-                    to="/route-b"
+                <Link to="/route-b"
                     activeProps={{
                         className: 'font-bold',
                     }}
