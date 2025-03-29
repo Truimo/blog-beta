@@ -1,5 +1,7 @@
 # Blog Beta 🥳
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5787e117-690e-46ee-9e81-d24bdcaf898e/deploy-status)](https://app.netlify.com/sites/blog-canary/deploys)
+
 This site is built with TanStack Router!
 
 - [TanStack Start Docs](https://tanstack.com/start/latest/docs/framework/react/overview)
