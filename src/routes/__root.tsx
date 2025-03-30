@@ -2,8 +2,8 @@ import {createRootRoute, HeadContent, Link, Outlet, Scripts,} from '@tanstack/re
 import {TanStackRouterDevtools} from '@tanstack/react-router-devtools'
 import React from 'react'
 import {seo} from '~/utils/seo'
-import {DefaultCatchBoundary} from '~/components/DefaultCatchBoundary'
-import {NotFound} from '~/components/NotFound'
+import {DefaultCatchBoundary} from '~/components/common/DefaultCatchBoundary'
+import {NotFound} from '~/components/common/NotFound'
 import appCss from '~/styles/app.css?url'
 
 
@@ -68,7 +68,7 @@ function RootComponent() {
 
 function RootDocument({children}: { children: React.ReactNode }) {
     return (
-        <html>
+        <html lang="zh-CN">
         <head>
             <HeadContent/>
         </head>
